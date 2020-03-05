@@ -151,16 +151,25 @@ function activateLightMode(){
 </li>
 </ul>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><p><code>this</code>关键字</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1.this是一个引用，this是一个变量，this变量保存了内存地址指向了 自身，this存储在JVM堆内存java对象内部。</span></span><br><span class="line"><span class="comment">* 2.创建100个java对象，每一个对象都有this，也就是说有100个不同的this。</span></span><br><span class="line"><span class="comment">* 3.this可以出现在实例方法中，this指向当前正在执行这个动作的对象</span></span><br><span class="line"><span class="comment">* 4.this在多数情况下是可以省略不写的。</span></span><br><span class="line"><span class="comment">* 5.this不能使用在带有static的方法当中(静态方法不存在对象，所以不存在this)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThis</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Students</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//无参构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//含参构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="comment">//this可省略</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//private修饰变量下的 setter and getter方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><em>关于<code>this</code>关键字在JVM中的存在形式</em></p>
+</li>
+</ul>
+<a href="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/this.jpg" data-fancybox="group" data-caption="this" class="fancybox"><img alt="this" style="zoom: 67%;" data-src="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/this.jpg" class="lazyload" title="this"></a>
+
+
+
+<ul>
+<li>super();语法</li>
 </ul>
 <ul>
 <li></li>
 <li><h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><ol>
 <li><p>什么是抽象类</p>
 <p>类和类之间具有共同特征，将这些共同特征提取出来，形成的就是抽象类。类本身是不存在的，所以抽象类无法创建对象“无法实例化”。</p>
-<a href="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/abstract.jpg" data-fancybox="group" data-caption="abstract" class="fancybox"><img alt="abstract" style="zoom:50%;" title="abstract" data-src="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/abstract.jpg" class="lazyload"></a>
+<a href="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/abstract.jpg" data-fancybox="group" data-caption="abstract" class="fancybox"><img alt="abstract" style="zoom:50%;" data-src="/images/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/abstract.jpg" class="lazyload" title="abstract"></a>
 </li>
 <li><p>抽象类属于引用数据类型</p>
 </li>
@@ -206,11 +215,12 @@ function activateLightMode(){
 </li>
 </ol>
 <ul>
-<li><h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><ol>
-<li>接口也是一种引用数据类型。编译之后也是一个class字节码文件。</li>
-</ol>
+<li><h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><p><em>关于接口的理解参考：<a href="http://www.360doc.com/content/13/1217/13/6828497_337848623.shtml" target="_blank" rel="noopener">OCP开闭原则</a></em></p>
 </li>
 </ul>
+<ol>
+<li>接口也是一种引用数据类型。编译之后也是一个class字节码文件。</li>
+</ol>
 <ol start="2">
 <li>接口是完全抽象的，（抽象类是半抽象）或者也可以说接口是特殊的抽象类。</li>
 </ol>
@@ -220,7 +230,7 @@ function activateLightMode(){
 <span class="comment">*    [修饰符列表] interface 类名{</span>
 <span class="comment">*    }</span>
 <span class="comment">*/</span>
-&lt;!--￼<span class="number">3</span>--&gt;
+&lt;!--￼<span class="number">4</span>--&gt;
 
 
 </code></pre>
